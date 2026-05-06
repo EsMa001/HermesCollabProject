@@ -11,6 +11,21 @@
   status: accepted_by_agent
   assumptions: []
   open_questions: []
+- id: SyR-002
+  version: 1
+  parent_ids:
+    - StR-002
+  title: Python-based implementation stack
+  statement: >
+    The system shall use Python as the primary language for production modules,
+    automated tests and repository automation scripts.
+  rationale: >
+    This ensures one consistent implementation and verification stack derived
+    from StR-002.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
 - id: SyR-004
   version: 1
   parent_ids:

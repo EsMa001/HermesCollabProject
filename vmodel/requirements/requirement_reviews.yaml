@@ -10,3 +10,14 @@ reviews:
     open_questions: []
     recommendations:
       - Preserve explicit references to software version, configuration version and input references in downstream artifacts.
+  - id: RVW-StR-002
+    requirement_id: StR-002
+    date: 2026-05-06
+    reviewer: hermes
+    status: reviewed
+    findings:
+      - The requirement is clear and testable through repository structure and tooling conventions.
+      - The requirement is a good constraint for future Codex handoff because it narrows the implementation stack.
+    open_questions: []
+    recommendations:
+      - Keep production modules, tests and automation scripts aligned to Python conventions.

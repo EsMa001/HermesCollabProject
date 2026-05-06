@@ -12,6 +12,35 @@
   status: accepted_by_agent
   assumptions: []
   open_questions: []
+- id: SwR-002
+  version: 1
+  parent_ids:
+    - SyR-002
+  title: Implement production modules in Python
+  statement: >
+    The software shall implement production modules as Python source files in
+    the repository's Python code layout.
+  rationale: >
+    Production implementation must conform to the Python baseline defined by
+    StR-002 and SyR-002.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-003
+  version: 1
+  parent_ids:
+    - SyR-002
+  title: Implement automated tests in Python
+  statement: >
+    The software shall implement automated tests as Python test modules using
+    the repository's Python test runner conventions.
+  rationale: >
+    Python-based tests keep verification aligned with the Python implementation stack.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
 - id: SwR-007
   version: 1
   parent_ids:

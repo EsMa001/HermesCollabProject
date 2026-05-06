@@ -4,6 +4,16 @@ decisions:
     relates_to: [SwR-001]
     status: accepted
     description: The run configuration is selected explicitly from a versioned artifact.
+  - id: DDS-002
+    title: Python production code baseline
+    relates_to: [SwR-002]
+    status: accepted
+    description: Production modules are created as Python source files under the Python code layout.
+  - id: DDS-003
+    title: Python test baseline
+    relates_to: [SwR-003]
+    status: accepted
+    description: Automated verification is created as Python test modules using pytest conventions.
   - id: DDS-007
     title: Run metadata persistence artifact
     relates_to: [SwR-007]

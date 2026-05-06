@@ -26,6 +26,7 @@ def test_generate_trace_matrix_creates_output() -> None:
     assert result.returncode == 0, result.stdout + result.stderr
     content = (REPO_ROOT / 'vmodel/traceability/generated_trace_matrix.md').read_text(encoding='utf-8')
     assert '| StR | SyR | SwR | DDS | Code | Test | Status |' in content
+    assert 'src/workflow_demo/config_loader.py' in content
 
 
 def test_generate_verification_report_creates_output() -> None:
