@@ -74,6 +74,12 @@ links:
   - type: implements
     from: src/workflow_demo/config_loader.py
     to: SwR-001
+  - type: implements
+    from: src/workflow_demo/run_workflow.py
+    to: SwR-007
+  - type: implements
+    from: src/workflow_demo/run_workflow.py
+    to: SwR-008
   - type: impacts
     from: CR-StR-001-002
     to: StR-001
