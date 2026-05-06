@@ -1,0 +1,28 @@
+- id: SyR-001
+  version: 1
+  parent_ids:
+    - StR-001
+  title: Versioned run configuration loading
+  statement: >
+    The system shall load runs from an explicitly chosen versioned
+    configuration artifact.
+  rationale: Explicit configuration selection is a prerequisite for reproducibility.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-004
+  version: 1
+  parent_ids:
+    - StR-001
+  title: Run metadata persistence
+  statement: >
+    The system shall persist software version, configuration version and
+    input data references for every completed run.
+  rationale: >
+    This system behavior is required to satisfy reproducibility and
+    auditability expectations from StR-001.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []

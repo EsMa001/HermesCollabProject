@@ -1,0 +1,25 @@
+process_model: vmodel_light
+repository_layout:
+  code_roots:
+    - src
+  test_roots:
+    - tests
+  requirements_root: vmodel/requirements
+  traceability_root: vmodel/traceability
+  prompts_root: prompts
+tailoring:
+  stakeholder_requirement_owner: user
+  system_requirement_default_acceptance: accepted_by_agent
+  software_requirement_default_acceptance: accepted_by_agent
+  implementation_requires:
+    - accepted_change_request
+    - accepted_stakeholder_requirement
+    - accepted_system_requirement
+    - accepted_software_requirement
+    - test_specification_present
+    - traceability_complete_to_swr
+    - non_main_branch
+branch_patterns:
+  - hermes/cr-<change-id>-<slug>
+  - hermes/implement-<swr-id>
+  - hermes/update-traceability-<requirement-id>

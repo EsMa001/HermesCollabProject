@@ -1,0 +1,5 @@
+acceptance:
+  status: pending
+  pending_items:
+    - ATC-StR-001-001
+  note: Initial setup completed. Stakeholder acceptance remains pending until a concrete implementation slice exists.

@@ -1,0 +1,26 @@
+- id: CR-StR-001-002
+  type: modify_acceptance_criteria
+  target_requirement: StR-001
+  target_version: 1
+  proposed_version: 2
+  title: Add explicit run metadata to reproducibility requirement
+  requested_by: user
+  date: 2026-05-06
+  reason: >
+    The user clarified that reproducibility requires storing software version,
+    configuration version and input data references.
+  proposed_change_summary: >
+    Extend StR-001 with explicit metadata persistence requirements and report visibility.
+  status: accepted
+  affected_items:
+    stakeholder_requirements: [StR-001]
+    system_requirements: [SyR-001, SyR-004]
+    software_requirements: [SwR-001, SwR-007, SwR-008]
+    architecture_elements: [SE-001, SE-005, SE-006]
+    tests: [TC-SwR-007-001, TC-SwR-008-001, ATC-StR-001-001]
+    code_files: []
+  decision:
+    status: accepted
+    decided_by: user
+    decision_date: 2026-05-06
+    notes: Example change accepted for process demonstration.

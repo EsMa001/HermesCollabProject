@@ -1,0 +1,68 @@
+- id: TC-SwR-001-001
+  verifies: [SwR-001]
+  level: unit
+  title: Load explicit configuration path
+  description: Verify that the configuration loader accepts an explicit path.
+  preconditions:
+    - A valid configuration artifact exists.
+  steps:
+    - Create a temporary configuration artifact.
+    - Load it via the repository configuration logic.
+  expected_result: The configuration loaded matches the provided artifact.
+- id: TC-SyR-001-001
+  verifies: [SyR-001]
+  level: system
+  title: Start run from explicit versioned configuration
+  description: Verify that a run can start from an explicitly selected configuration artifact.
+  preconditions:
+    - A valid versioned configuration file exists.
+  steps:
+    - Start the run using an explicit configuration path.
+  expected_result: The run starts successfully using the selected configuration artifact.
+- id: TC-SwR-007-001
+  verifies: [SwR-007]
+  level: unit
+  title: Persist mandatory run metadata
+  description: Verify that the run metadata writer persists required fields.
+  preconditions:
+    - Metadata fields are available.
+  steps:
+    - Create metadata object.
+    - Persist it.
+    - Reload the artifact.
+  expected_result: The artifact contains software_version, configuration_version and input_data_references.
+- id: TC-SwR-008-001
+  verifies: [SwR-008]
+  level: integration
+  title: Show metadata in run report
+  description: Verify that the user-visible report exposes persisted metadata fields.
+  preconditions:
+    - Run metadata has been persisted.
+  steps:
+    - Generate run report.
+    - Inspect report content.
+  expected_result: The report includes all mandatory reproducibility metadata fields.
+- id: TC-SyR-004-001
+  verifies: [SyR-004]
+  level: system
+  title: Preserve reproducibility metadata across a completed run
+  description: Verify that a completed run produces retained metadata needed for reproducibility.
+  preconditions:
+    - End-to-end run execution is available.
+  steps:
+    - Start a run from a versioned configuration.
+    - Complete the run.
+    - Inspect metadata and report artifacts.
+  expected_result: Persisted artifacts include software version, configuration version and input references.
+- id: ATC-StR-001-001
+  validates: [StR-001]
+  level: acceptance
+  title: User acceptance test for reproducible run
+  description: Validate that the user can execute a run and inspect all metadata required for reproducibility.
+  acceptance_criteria:
+    - AC-StR-001-01
+    - AC-StR-001-02
+    - AC-StR-001-03
+    - AC-StR-001-04
+    - AC-StR-001-05
+  expected_result: The run report and output folder contain sufficient metadata to reproduce and audit the run.

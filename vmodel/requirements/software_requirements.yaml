@@ -1,0 +1,41 @@
+- id: SwR-001
+  version: 1
+  parent_ids:
+    - SyR-001
+  title: Load run configuration from explicit file path
+  statement: >
+    The software shall load run configuration from an explicit file path.
+  rationale: >
+    Explicit configuration loading provides the basis for versioned and
+    reproducible execution.
+  verification_method: unit_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-007
+  version: 1
+  parent_ids:
+    - SyR-004
+  title: Persist run metadata
+  statement: >
+    The software shall write run metadata containing software version,
+    configuration version and input data references to the run output location.
+  rationale: >
+    The metadata file provides objective evidence for reproducibility of an
+    executed run.
+  verification_method: unit_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-008
+  version: 1
+  parent_ids:
+    - SyR-004
+  title: Present run metadata in report output
+  statement: >
+    The software shall expose persisted run metadata in a user-inspectable run report.
+  rationale: Users need a directly inspectable view of stored metadata.
+  verification_method: integration_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []

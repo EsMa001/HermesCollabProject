@@ -1,0 +1,9 @@
+entries:
+  - id: CHG-001
+    date: 2026-05-06
+    title: Initial V-Model-light scaffold
+    description: >
+      Added governance, requirements artifacts, prompts, verification tooling,
+      CI and example change workflow.
+    related_change_requests:
+      - CR-StR-001-002

@@ -1,0 +1,12 @@
+reviews:
+  - id: RVW-StR-001
+    requirement_id: StR-001
+    date: 2026-05-06
+    reviewer: hermes
+    status: reviewed
+    findings:
+      - Requirement is testable through configuration, metadata persistence and report inspection.
+      - Acceptance criteria are specific enough for SyR and SwR derivation.
+    open_questions: []
+    recommendations:
+      - Preserve explicit references to software version, configuration version and input references in downstream artifacts.

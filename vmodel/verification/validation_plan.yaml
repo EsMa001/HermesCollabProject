@@ -1,0 +1,6 @@
+validation_strategy:
+  owner: user
+  focus: stakeholder acceptance at system level
+  stakeholder_validation:
+    - id: ATC-StR-001-001
+      requirement: StR-001

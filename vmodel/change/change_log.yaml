@@ -1,0 +1,6 @@
+entries:
+  - id: CRLOG-001
+    change_request_id: CR-StR-001-002
+    date: 2026-05-06
+    event: accepted
+    notes: Example stakeholder requirement change accepted for workflow demonstration.

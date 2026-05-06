@@ -1,0 +1,16 @@
+decisions:
+  - id: DDS-001
+    title: Configuration loading remains explicit and versioned
+    relates_to: [SwR-001]
+    status: accepted
+    description: The run configuration is selected explicitly from a versioned artifact.
+  - id: DDS-007
+    title: Run metadata persistence artifact
+    relates_to: [SwR-007]
+    status: proposed
+    description: Persist run metadata to a dedicated artifact in the run output directory.
+  - id: DDS-008
+    title: Run report metadata section
+    relates_to: [SwR-008]
+    status: proposed
+    description: Extend run summary output with explicit metadata references.

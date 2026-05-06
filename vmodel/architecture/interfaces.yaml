@@ -1,0 +1,11 @@
+interfaces:
+  - id: IF-001
+    name: run_configuration_input
+    provider: src
+    consumers: [user]
+    description: Explicit configuration input for a controlled run.
+  - id: IF-002
+    name: run_metadata_artifact
+    provider: planned
+    consumers: [user, verification_tooling]
+    description: Persisted metadata artifact proposed for SwR-007 and SwR-008.

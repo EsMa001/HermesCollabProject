@@ -1,0 +1,34 @@
+- id: StR-001
+  version: 2
+  title: Reproducible analysis run
+  statement: >
+    As a user, I want every analysis run to be reproducible, so that results
+    can be reviewed, compared and audited later.
+  rationale: >
+    Reproducibility requires preserving configuration, software version,
+    input references and generated outputs of each analysis run.
+  priority: must
+  status: accepted
+  owner: user
+  acceptance_criteria:
+    - id: AC-StR-001-01
+      statement: A run can be started from a versioned configuration.
+    - id: AC-StR-001-02
+      statement: The run stores the software version used for execution.
+    - id: AC-StR-001-03
+      statement: The run stores the configuration version used for execution.
+    - id: AC-StR-001-04
+      statement: The run stores references to all relevant input data.
+    - id: AC-StR-001-05
+      statement: The user can inspect the generated run report.
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-06
+      reason: Initial accepted version.
+    - version: 2
+      date: 2026-05-06
+      reason: Accepted via CR-StR-001-002 to add explicit run metadata.
+  change_request:
+    - CR-StR-001-002

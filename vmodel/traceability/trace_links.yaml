@@ -1,0 +1,62 @@
+links:
+  - type: derives
+    from: SyR-001
+    to: StR-001
+  - type: derives
+    from: SyR-004
+    to: StR-001
+  - type: derives
+    from: SwR-001
+    to: SyR-001
+  - type: derives
+    from: SwR-007
+    to: SyR-004
+  - type: derives
+    from: SwR-008
+    to: SyR-004
+  - type: verifies
+    from: TC-SwR-001-001
+    to: SwR-001
+  - type: verifies
+    from: TC-SyR-001-001
+    to: SyR-001
+  - type: verifies
+    from: TC-SwR-007-001
+    to: SwR-007
+  - type: verifies
+    from: TC-SwR-008-001
+    to: SwR-008
+  - type: verifies
+    from: TC-SyR-004-001
+    to: SyR-004
+  - type: validates
+    from: ATC-StR-001-001
+    to: StR-001
+  - type: implements
+    from: DDS-001
+    to: SwR-001
+  - type: implements
+    from: DDS-007
+    to: SwR-007
+  - type: implements
+    from: DDS-008
+    to: SwR-008
+  - type: impacts
+    from: CR-StR-001-002
+    to: StR-001
+  - type: impacts
+    from: CR-StR-001-002
+    to: SyR-004
+  - type: impacts
+    from: CR-StR-001-002
+    to: SwR-007
+  - type: impacts
+    from: CR-StR-001-002
+    to: SwR-008
+waivers:
+  - requirement_id: StR-001
+    rationale: Downstream implementation is intentionally pending after process setup.
+  - requirement_id: SwR-007
+    rationale: No production implementation yet; test specs and design placeholders created first.
+  - requirement_id: SwR-008
+    rationale: No production implementation yet; report behavior remains a future slice.

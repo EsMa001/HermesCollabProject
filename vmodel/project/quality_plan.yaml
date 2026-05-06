@@ -1,0 +1,52 @@
+requirement_statuses:
+  stakeholder:
+    - draft
+    - proposed
+    - reviewed
+    - accepted
+    - changed
+    - validated
+    - rejected
+    - deprecated
+  change_request:
+    - draft
+    - proposed
+    - impact_analysis_pending
+    - impact_analyzed
+    - user_review_required
+    - accepted
+    - rejected
+    - implemented
+    - verified
+    - validated
+    - closed
+  system_and_software:
+    - draft
+    - proposed
+    - accepted_by_agent
+    - accepted_by_user
+    - implemented
+    - verified
+    - rejected
+    - deprecated
+verification_methods:
+  - review
+  - analysis
+  - unit_test
+  - integration_test
+  - system_test
+  - acceptance_test
+code_link_policy:
+  mode: strict
+  code_roots:
+    - src
+  allowed_docstring_headers:
+    - Implements:
+    - Design:
+  legacy_waived_files: []
+waivers:
+  - id: WVR-001
+    scope: accepted example change with implementation pending
+    rationale: >
+      The repository starts with process artifacts and an example change
+      workflow before any product-specific implementation slice exists.
