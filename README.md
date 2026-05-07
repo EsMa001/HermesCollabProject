@@ -79,3 +79,13 @@ The repository contains an initial worked example for:
 - test specifications
 - traceability matrix
 - verification report
+
+## Calculator Example Branch Note
+
+On branch `hermes/calculator-example`, the calculator-specific stakeholder
+requirements are merged into the main file:
+
+- `vmodel/requirements/stakeholder_requirements.yaml`
+
+Temporary traceability waivers exist for the calculator-only `StR-*` entries
+until their derived `SyR-*` chain is created in the next steps.

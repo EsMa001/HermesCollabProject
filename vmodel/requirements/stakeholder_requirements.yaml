@@ -9,7 +9,7 @@
     input references and generated outputs of each analysis run.
   priority: must
   status: accepted
-  owner: user
+  owner: Max
   acceptance_criteria:
     - id: AC-StR-001-01
       statement: A run can be started from a versioned configuration.
@@ -40,11 +40,11 @@
     so that requirements, implementation, tests and tooling are aligned to one
     language stack.
   rationale: >
-    A single primary language reduces integration friction and keeps Codex
+    A single primary language reduces integration friction and keeps agentic
     handoff, tests and review conventions consistent.
   priority: must
   status: accepted
-  owner: user
+  owner: Max
   acceptance_criteria:
     - id: AC-StR-002-01
       statement: Production code is implemented in Python.
@@ -58,3 +58,354 @@
     - version: 1
       date: 2026-05-06
       reason: User specified that the project shall be a Python project.
+- id: StR-010
+  version: 1
+  title: Calculator demo purpose
+  statement: >
+    The calculator shall serve as a local demo project that demonstrates both
+    correct execution of simple arithmetic operations and a traceable
+    development workflow.
+  rationale: >
+    The mini project is intended to demonstrate functional behavior together
+    with requirements, tests and traceability.
+  priority: must
+  status: accepted
+  owner: Max
+  notes:
+    - Primary stakeholder: Max.
+    - Dual goal: functionally correct calculator and demonstrator for workflow with requirements, tests and traceability.
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the previously separate calculator stakeholder requirement draft and renumbered to avoid ID collision with the existing worked example.
+- id: StR-011
+  version: 1
+  title: Basic arithmetic operations
+  statement: >
+    The calculator shall support the four basic arithmetic operations:
+    addition, subtraction, multiplication and division.
+  rationale: >
+    The basic arithmetic operations define the functional core of the first
+    calculator scope.
+  priority: must
+  status: accepted
+  owner: Max
+  acceptance_criteria:
+    - id: AC-StR-011-01
+      statement: Addition is supported.
+    - id: AC-StR-011-02
+      statement: Subtraction is supported.
+    - id: AC-StR-011-03
+      statement: Multiplication is supported.
+    - id: AC-StR-011-04
+      statement: Division is supported.
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft and replaces the previous simplified calculator requirement set.
+- id: StR-012
+  version: 1
+  title: Graphical user interface
+  statement: >
+    The calculator shall provide a classic graphical calculator user interface
+    with digit buttons, operator buttons and a result display.
+  rationale: >
+    A classic GUI makes the example directly usable and easy to demonstrate.
+  priority: must
+  status: accepted
+  owner: Max
+  acceptance_criteria:
+    - id: AC-StR-012-01
+      statement: The user interface provides digit buttons.
+    - id: AC-StR-012-02
+      statement: The user interface provides operator buttons.
+    - id: AC-StR-012-03
+      statement: The user interface provides a visible display for input and results.
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft and expands the earlier simplified calculator UI statement.
+- id: StR-013
+  version: 1
+  title: Interaction concept
+  statement: >
+    The calculator shall support only simple operations in the first scope and
+    shall not support complex mathematical expressions.
+  rationale: >
+    The first scope should remain small, clear and easy to test.
+  priority: must
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-014
+  version: 1
+  title: Local single-user operation
+  statement: >
+    The calculator shall be provided as a local single-user application without
+    network or multi-user functionality.
+  rationale: >
+    The mini project does not require distributed or collaborative behavior in
+    the first scope.
+  priority: must
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-015
+  version: 1
+  title: Platform concept
+  statement: >
+    The calculator shall be implemented in the first scope as a local desktop
+    application based on Python and Tkinter.
+  rationale: >
+    Python and Tkinter keep the example local, simple and implementable without
+    additional GUI dependencies.
+  priority: must
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-016
+  version: 1
+  title: Supported number types
+  statement: >
+    The calculator shall process both integers and decimal numbers in the first
+    scope.
+  rationale: >
+    The example should be realistic enough for typical basic arithmetic use
+    cases.
+  priority: must
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-017
+  version: 1
+  title: Division by zero handling
+  statement: >
+    The calculator shall raise a clear error for division by zero and shall
+    handle that error in a way that is understandable to the user.
+  rationale: >
+    Division by zero is a central error case in the first scope.
+  priority: must
+  status: accepted
+  owner: Max
+  acceptance_criteria:
+    - id: AC-StR-017-01
+      statement: Division by zero is rejected.
+    - id: AC-StR-017-02
+      statement: The user receives a clear error indication.
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft and expands the earlier simplified calculator error statement.
+- id: StR-018
+  version: 1
+  title: General error handling
+  statement: >
+    The calculator shall prevent invalid input where reasonably possible and
+    shall display any remaining errors in an understandable way.
+  rationale: >
+    Predictable error behavior improves robustness and usability of the
+    demonstrator.
+  priority: should
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-019
+  version: 1
+  title: Additional controls
+  statement: >
+    The calculator shall provide at least Clear (C) and equals (=) functions in
+    the first scope.
+  rationale: >
+    These controls are required for a usable basic calculator interaction flow.
+  priority: must
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-020
+  version: 1
+  title: Result reuse
+  statement: >
+    The calculator shall allow a computed result to be reused directly as the
+    starting point for a subsequent operation.
+  rationale: >
+    This reflects natural behavior of a classic calculator.
+  priority: should
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-021
+  version: 1
+  title: Traceability
+  statement: >
+    The project shall be structured so that requirements, implementation and
+    tests can be traced to one another in the first scope.
+  rationale: >
+    The project is explicitly intended to demonstrate traceability and workflow
+    discipline.
+  priority: must
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-022
+  version: 1
+  title: Separation of concerns
+  statement: >
+    The project shall be cleanly structured in the first scope so that the
+    calculation logic and the user interface can be considered and evolved
+    separately.
+  rationale: >
+    Separating GUI and calculation core improves maintainability and testability.
+  priority: must
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-023
+  version: 1
+  title: Testability
+  statement: >
+    The project shall include automated tests for the calculation logic and for
+    selected parts of the user interface.
+  rationale: >
+    Automated tests are required for both the demonstrator and the workflow
+    evidence chain.
+  priority: must
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-024
+  version: 1
+  title: User-friendly result formatting
+  statement: >
+    The calculator shall display results in a user-friendly way, especially
+    without unnecessary trailing decimal places.
+  rationale: >
+    Result presentation should be plausible and easy to read for a human user.
+  priority: should
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-025
+  version: 1
+  title: Language
+  statement: >
+    The user interface and relevant error messages shall be provided in German
+    in the first scope.
+  rationale: >
+    A German-language GUI fits the intended demonstration context.
+  priority: should
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-026
+  version: 1
+  title: Initial state
+  statement: >
+    The calculator shall have a defined initial state after startup in which
+    the display shows the value 0.
+  rationale: >
+    A defined startup state improves usability and testability.
+  priority: must
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.
+- id: StR-027
+  version: 1
+  title: Excluded features
+  statement: >
+    The calculator shall not support, in the first scope, complex expressions
+    with operator precedence, parentheses, scientific functions, memory
+    functions, history, keyboard operation, copy/paste or undo/redo.
+  rationale: >
+    Explicit scope limits protect the mini project from unnecessary complexity
+    in the first increment.
+  priority: must
+  status: accepted
+  owner: Max
+  assumptions: []
+  open_questions: []
+  scope_exclusions:
+    - complex expressions with operator precedence
+    - parentheses
+    - scientific functions
+    - memory functions
+    - history
+    - keyboard operation
+    - copy/paste
+    - undo/redo
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Merged from the detailed calculator stakeholder requirement draft.

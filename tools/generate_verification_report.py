@@ -6,6 +6,7 @@ from _vmodel_common import REPO_ROOT, load_requirement_sets, trace_waivers, writ
 
 def generate() -> int:
     data = load_requirement_sets()
+    waivers = trace_waivers()
     lines = [
         '# Verification Report',
         '',
@@ -13,6 +14,7 @@ def generate() -> int:
         '',
         '- Initial V-Model-light scaffold',
         '- Example change workflow `CR-StR-001-002`',
+        '- Implemented minimal workflow slice for configuration loading and reproducibility metadata',
         '',
         '## Affected Requirements',
         '',
@@ -25,9 +27,18 @@ def generate() -> int:
         targets = test.get('verifies') or test.get('validates') or []
         lines.append(f"- `{test['id']}` -> {', '.join(targets)} [{test.get('level', 'n/a')}]")
     lines.extend(['', '## Traceability Waivers', ''])
-    for waiver in trace_waivers():
-        lines.append(f"- `{waiver['requirement_id']}` — {waiver['rationale']}")
-    lines.extend(['', '## Acceptance Recommendation', '', 'Process setup artifacts are ready for review. Do not start implementation before a concrete SwR slice is approved on a non-main branch.', ''])
+    if waivers:
+        for waiver in waivers:
+            lines.append(f"- `{waiver['requirement_id']}` — {waiver['rationale']}")
+    else:
+        lines.append('- None.')
+    lines.extend([
+        '',
+        '## Acceptance Recommendation',
+        '',
+        'The current minimal workflow slice is ready for review with trace-linked implementation artifacts. Before acceptance of further changes, re-run the local validators and tests on the working tree. The next recommended increment is an end-to-end run entry point that exercises configuration loading, metadata persistence and report generation together.',
+        '',
+    ])
     write_text(REPO_ROOT / 'vmodel/verification/verification_report.md', '\n'.join(lines))
     print('Verification report generated.')
     return 0
