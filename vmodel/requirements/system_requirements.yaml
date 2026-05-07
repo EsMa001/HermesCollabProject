@@ -57,13 +57,15 @@
   assumptions: []
   open_questions: []
 - id: SyR-011
-  version: 1
+  version: 2
   parent_ids:
     - StR-012
   title: Provide classical calculator GUI
   statement: >
     The system shall provide a graphical calculator user interface with digit
-    buttons, operator buttons and a visible display for input and results.
+    buttons, operator buttons and a visible display for input and results. In
+    the initial standard keypad layout, the equals control shall be placed in
+    the bottom-right corner.
   rationale: >
     A usable calculator demonstrator requires a concrete interactive GUI.
   verification_method: system_test
@@ -162,13 +164,14 @@
   assumptions: []
   open_questions: []
 - id: SyR-018
-  version: 1
+  version: 2
   parent_ids:
     - StR-019
   title: Provide clear and equals controls
   statement: >
     The system shall provide at least a Clear control and an equals control in
-    the calculator user interface.
+    the calculator user interface, with the equals control positioned in the
+    bottom-right corner of the initial standard keypad layout.
   rationale: >
     These controls are essential for a usable basic calculator interaction.
   verification_method: system_test

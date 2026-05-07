@@ -104,12 +104,13 @@
   verifies: [SyR-011]
   level: system
   title: Show classic calculator GUI elements
-  description: Verify that the calculator GUI exposes digit buttons, operator buttons and a display.
+  description: Verify that the calculator GUI exposes digit buttons, operator buttons and a display, with the equals control shown in the bottom-right corner of the initial keypad layout.
   preconditions:
     - The calculator application is started.
   steps:
     - Inspect the visible user interface.
-  expected_result: The UI contains digit buttons, operator buttons and a visible display.
+    - Confirm that the equals control is located in the bottom-right corner of the initial keypad layout.
+  expected_result: The UI contains digit buttons, operator buttons and a visible display, and the equals control is shown in the bottom-right corner of the initial keypad layout.
 - id: TC-SyR-012-001
   verifies: [SyR-012]
   level: analysis
@@ -178,13 +179,14 @@
   verifies: [SyR-018]
   level: system
   title: Provide clear and equals controls
-  description: Verify that the calculator UI provides Clear and equals controls and that they can be invoked by the user.
+  description: Verify that the calculator UI provides Clear and equals controls, places the equals control in the bottom-right corner of the initial keypad layout, and allows both controls to be invoked by the user.
   preconditions:
     - The calculator application is started.
   steps:
     - Inspect the UI for Clear and equals controls.
+    - Confirm that the equals control is located in the bottom-right corner of the initial keypad layout.
     - Invoke each control once.
-  expected_result: Clear and equals controls are available and invokable.
+  expected_result: Clear and equals controls are available, the equals control is shown in the bottom-right corner of the initial keypad layout, and both controls are invokable.
 - id: TC-SyR-019-001
   verifies: [SyR-019]
   level: system
@@ -273,13 +275,14 @@
   verifies: [SwR-011]
   level: integration
   title: Render calculator buttons and display
-  description: Verify that the Tkinter calculator UI creates digit buttons, operator buttons and a display widget.
+  description: Verify that the Tkinter calculator UI creates digit buttons, operator buttons and a display widget, with the equals control rendered in the bottom-right position of the initial 4x4 keypad layout.
   preconditions:
     - The calculator UI can be instantiated.
   steps:
     - Instantiate the calculator UI.
     - Inspect the created widgets.
-  expected_result: The UI contains digit buttons, operator buttons and a display widget.
+    - Confirm that the equals control occupies the bottom-right button position in the initial 4x4 keypad layout.
+  expected_result: The UI contains digit buttons, operator buttons and a display widget, and the equals control occupies the bottom-right button position in the initial 4x4 keypad layout.
 - id: TC-SwR-012-001
   verifies: [SwR-012]
   level: integration
@@ -348,14 +351,15 @@
   verifies: [SwR-018]
   level: integration
   title: Execute Clear and equals actions
-  description: Verify that Clear and equals actions update the calculator state and display as intended.
+  description: Verify that Clear and equals actions update the calculator state and display as intended and that the equals action is exposed through the bottom-right button of the initial 4x4 keypad layout.
   preconditions:
     - The calculator UI or controller is available.
   steps:
     - Enter a representative calculation.
+    - Confirm that the bottom-right button is labeled with equals.
     - Invoke equals.
     - Invoke Clear.
-  expected_result: Equals computes and shows a result, and Clear resets the calculator state and display.
+  expected_result: The bottom-right button triggers equals, equals computes and shows a result, and Clear resets the calculator state and display.
 - id: TC-SwR-019-001
   verifies: [SwR-019]
   level: integration

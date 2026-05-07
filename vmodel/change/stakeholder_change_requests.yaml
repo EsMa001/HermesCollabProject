@@ -39,7 +39,7 @@
     Extend StR-012 with a layout-oriented acceptance criterion that constrains
     the initial GUI so that the equals control is shown in the bottom-right
     corner of the calculator keypad.
-  status: user_review_required
+  status: implemented
   affected_items:
     stakeholder_requirements: [StR-012, StR-019]
     system_requirements: [SyR-011, SyR-018]
@@ -48,7 +48,10 @@
     tests: [TC-SyR-011-001, TC-SyR-018-001, TC-SwR-011-001, TC-SwR-018-001]
     code_files: [src/calculator_demo/ui.py, tests/unit/test_calculator_ui_spec.py]
   decision:
-    status: pending_user_clarification
-    decided_by: null
-    decision_date: null
-    notes: Awaiting clarification of layout scope and acceptance details.
+    status: accepted
+    decided_by: user
+    decision_date: 2026-05-07
+    notes: >
+      User accepted the recommended interpretation: mandatory requirement,
+      initial standard view, implemented as swapping '+' and '=' within the
+      existing 4x4 keypad layout.

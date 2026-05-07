@@ -47,6 +47,8 @@ Accept the change and update downstream requirements and tests before opening an
 The user requested a GUI layout constraint for the calculator:
 - the equals control shall be placed in the bottom-right corner
 - this shall be made explicit already at stakeholder-requirement level
+- the accepted interpretation is limited to the initial standard view
+- the concrete UI change is the swap of `'+'` and `'='` within the existing 4x4 keypad layout
 
 ## Affected System Requirements
 
@@ -69,18 +71,18 @@ The user requested a GUI layout constraint for the calculator:
 
 ## Assessment
 
-- Implementation change required: **likely yes**
+- Implementation change required: **yes**
 - Test update required: **yes**
 - Architecture update required: **minor**
 - Breaking change: **no functional change expected**
-- User approval required before implementation: **yes**
+- User approval required before implementation: **completed**
 
-## Open Clarifications
+## Resolved Clarifications
 
-- Is only the initial visual position relevant, or also behavior after window resizing?
-- Is the intended UI change the simple swap of `'+'` and `'='` within the existing 4x4 keypad layout?
-- Is this a mandatory acceptance constraint or a preferred layout convention?
+- Only the initial visual position is constrained.
+- The intended implementation is the simple swap of `'+'` and `'='` within the existing 4x4 keypad layout.
+- The layout constraint is mandatory for the first scope.
 
 ## Recommendation
 
-Keep the stakeholder change in proposed state until the layout scope is clarified, then accept the CR and derive updated SyR/SwR/test artifacts.
+Accept the change, update the affected downstream artifacts, implement the keypad layout adjustment, and verify it through requirements validation, traceability validation, code-link validation and focused GUI tests.
