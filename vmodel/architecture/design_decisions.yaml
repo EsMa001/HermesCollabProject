@@ -17,10 +17,90 @@ decisions:
   - id: DDS-007
     title: Run metadata persistence artifact
     relates_to: [SwR-007]
-    status: proposed
+    status: accepted
     description: Persist run metadata to a dedicated artifact in the run output directory.
   - id: DDS-008
     title: Run report metadata section
     relates_to: [SwR-008]
-    status: proposed
+    status: accepted
     description: Extend run summary output with explicit metadata references.
+  - id: DDS-010
+    title: Arithmetic core operation module
+    relates_to: [SwR-010]
+    status: accepted
+    description: Implement arithmetic execution in a dedicated calculator core module that accepts two operands and a supported operator.
+  - id: DDS-011
+    title: Tkinter calculator widget composition
+    relates_to: [SwR-011]
+    status: accepted
+    description: Build the calculator UI from Tkinter widgets for the display, digit controls and operator controls.
+  - id: DDS-012
+    title: Sequential interaction state model
+    relates_to: [SwR-012]
+    status: accepted
+    description: Use a sequential calculator state model instead of a general expression parser to enforce the first-scope interaction limits.
+  - id: DDS-013
+    title: Local-process-only runtime model
+    relates_to: [SwR-013]
+    status: accepted
+    description: Keep the calculator runtime self-contained in a local desktop process without network or multi-user service dependencies.
+  - id: DDS-014
+    title: Tkinter application entry point
+    relates_to: [SwR-014]
+    status: accepted
+    description: Provide a Python entry point that constructs the Tkinter calculator application and main window.
+  - id: DDS-015
+    title: Decimal-capable input parsing
+    relates_to: [SwR-015]
+    status: accepted
+    description: Parse user input into numeric values that preserve both integer and decimal calculator behavior.
+  - id: DDS-016
+    title: Explicit division-by-zero guard
+    relates_to: [SwR-016]
+    status: accepted
+    description: Detect division-by-zero requests before result output and route them into an error state.
+  - id: DDS-017
+    title: User-visible invalid-request error mapping
+    relates_to: [SwR-017]
+    status: accepted
+    description: Map invalid interaction situations to understandable user-visible error text instead of undefined behavior.
+  - id: DDS-018
+    title: Dedicated Clear and equals actions
+    relates_to: [SwR-018]
+    status: accepted
+    description: Implement Clear and equals as explicit actions that update calculator state and display deterministically.
+  - id: DDS-019
+    title: Session-state result retention
+    relates_to: [SwR-019]
+    status: accepted
+    description: Retain the last computed result in calculator session state for direct reuse by subsequent operations.
+  - id: DDS-020
+    title: Traceable calculator implementation plan
+    relates_to: [SwR-020]
+    status: accepted
+    description: Maintain explicit trace links from calculator requirements to planned modules and automated tests.
+  - id: DDS-021
+    title: Separate calculator core and GUI modules
+    relates_to: [SwR-021]
+    status: accepted
+    description: Place calculation logic and Tkinter GUI responsibilities in separate modules with clear interfaces.
+  - id: DDS-022
+    title: Split automated tests by logic and GUI scope
+    relates_to: [SwR-022]
+    status: accepted
+    description: Organize automated tests so arithmetic core behavior and selected GUI behavior can be verified independently.
+  - id: DDS-023
+    title: Dedicated result formatting helper
+    relates_to: [SwR-023]
+    status: accepted
+    description: Centralize display formatting so unnecessary trailing decimal places are removed consistently.
+  - id: DDS-024
+    title: Central German UI text definitions
+    relates_to: [SwR-024]
+    status: accepted
+    description: Keep user-visible labels and relevant error strings in explicit German text definitions for the calculator UI.
+  - id: DDS-025
+    title: Startup display initialization to zero
+    relates_to: [SwR-025]
+    status: accepted
+    description: Initialize calculator startup state so the display shows 0 before any user interaction.

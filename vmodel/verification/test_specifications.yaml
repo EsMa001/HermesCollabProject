@@ -259,6 +259,176 @@
     - Start the application.
     - Inspect the initial display.
   expected_result: The display shows 0 after startup.
+- id: TC-SwR-010-001
+  verifies: [SwR-010]
+  level: unit
+  title: Execute arithmetic core operation
+  description: Verify that the arithmetic core returns correct results for supported operators.
+  preconditions:
+    - The arithmetic core function is available.
+  steps:
+    - Invoke the arithmetic core with representative operands and each supported operator.
+  expected_result: The arithmetic core returns the correct result for each supported operator.
+- id: TC-SwR-011-001
+  verifies: [SwR-011]
+  level: integration
+  title: Render calculator buttons and display
+  description: Verify that the Tkinter calculator UI creates digit buttons, operator buttons and a display widget.
+  preconditions:
+    - The calculator UI can be instantiated.
+  steps:
+    - Instantiate the calculator UI.
+    - Inspect the created widgets.
+  expected_result: The UI contains digit buttons, operator buttons and a display widget.
+- id: TC-SwR-012-001
+  verifies: [SwR-012]
+  level: integration
+  title: Enforce simple-operation state model
+  description: Verify that the calculator interaction model supports only simple sequential operations and excludes advanced expression parsing.
+  preconditions:
+    - The calculator UI or controller is available.
+  steps:
+    - Execute representative simple operations.
+    - Attempt excluded advanced interaction patterns.
+  expected_result: Simple sequential operations are supported and excluded advanced patterns are not executed.
+- id: TC-SwR-013-001
+  verifies: [SwR-013]
+  level: analysis
+  title: Confirm local process dependencies only
+  description: Verify that the calculator software does not require network or multi-user dependencies.
+  preconditions:
+    - Software artifacts are available.
+  steps:
+    - Inspect runtime dependencies and software interfaces.
+  expected_result: The software runs as a local process without network or multi-user dependencies.
+- id: TC-SwR-014-001
+  verifies: [SwR-014]
+  level: integration
+  title: Start Tkinter calculator application entry point
+  description: Verify that the calculator exposes a Tkinter-based application entry point.
+  preconditions:
+    - The calculator application package is available.
+  steps:
+    - Invoke the application entry point.
+    - Inspect the resulting root window and calculator UI.
+  expected_result: The application entry point starts a Tkinter-based calculator UI.
+- id: TC-SwR-015-001
+  verifies: [SwR-015]
+  level: unit
+  title: Parse integer and decimal input values
+  description: Verify that integer and decimal inputs are parsed and stored correctly.
+  preconditions:
+    - The input parsing logic is available.
+  steps:
+    - Parse representative integer inputs.
+    - Parse representative decimal inputs.
+  expected_result: Integer and decimal inputs are accepted and represented correctly.
+- id: TC-SwR-016-001
+  verifies: [SwR-016]
+  level: unit
+  title: Detect division by zero before numeric result output
+  description: Verify that division-by-zero requests produce an error state instead of a numeric result.
+  preconditions:
+    - The arithmetic or controller logic is available.
+  steps:
+    - Invoke a division-by-zero request.
+  expected_result: The request produces an error state and no numeric result.
+- id: TC-SwR-017-001
+  verifies: [SwR-017]
+  level: integration
+  title: Map invalid requests to understandable errors
+  description: Verify that remaining invalid requests are converted into understandable error text.
+  preconditions:
+    - The calculator controller or UI is available.
+  steps:
+    - Trigger representative invalid request cases.
+    - Inspect the displayed error text.
+  expected_result: The user receives understandable error text for invalid requests.
+- id: TC-SwR-018-001
+  verifies: [SwR-018]
+  level: integration
+  title: Execute Clear and equals actions
+  description: Verify that Clear and equals actions update the calculator state and display as intended.
+  preconditions:
+    - The calculator UI or controller is available.
+  steps:
+    - Enter a representative calculation.
+    - Invoke equals.
+    - Invoke Clear.
+  expected_result: Equals computes and shows a result, and Clear resets the calculator state and display.
+- id: TC-SwR-019-001
+  verifies: [SwR-019]
+  level: integration
+  title: Reuse previous result from session state
+  description: Verify that the last result remains available for a subsequent calculation.
+  preconditions:
+    - The calculator controller or UI is available.
+  steps:
+    - Execute a first calculation.
+    - Continue with a second calculation using the retained result.
+  expected_result: The retained result is reused without manual re-entry.
+- id: TC-SwR-020-001
+  verifies: [SwR-020]
+  level: analysis
+  title: Confirm software-level trace links exist
+  description: Verify that calculator software artifacts maintain explicit links to requirements, planned implementation elements and tests.
+  preconditions:
+    - Traceability artifacts are available.
+  steps:
+    - Inspect software requirements, trace links and planned implementation artifacts.
+  expected_result: Explicit software-level trace links are defined from requirements to planned implementation elements and tests.
+- id: TC-SwR-021-001
+  verifies: [SwR-021]
+  level: analysis
+  title: Confirm calculator core and GUI module separation
+  description: Verify that derived software artifacts require separate modules for calculator core logic and GUI responsibilities.
+  preconditions:
+    - Software requirements and design artifacts are available.
+  steps:
+    - Inspect software requirements and design decisions.
+  expected_result: Calculator core and GUI responsibilities are assigned to separate modules.
+- id: TC-SwR-022-001
+  verifies: [SwR-022]
+  level: analysis
+  title: Confirm automated test scope for logic and GUI
+  description: Verify that the planned automated tests cover arithmetic logic and selected GUI behavior.
+  preconditions:
+    - Software requirements and verification artifacts are available.
+  steps:
+    - Inspect software requirements and test specifications.
+  expected_result: Planned automated tests cover arithmetic logic and selected GUI behavior.
+- id: TC-SwR-023-001
+  verifies: [SwR-023]
+  level: unit
+  title: Format results without unnecessary trailing decimals
+  description: Verify that result formatting preserves value while removing unnecessary trailing decimal places.
+  preconditions:
+    - The result formatting logic is available.
+  steps:
+    - Format representative integer-like and decimal results.
+  expected_result: Results remain numerically correct and omit unnecessary trailing decimal places.
+- id: TC-SwR-024-001
+  verifies: [SwR-024]
+  level: integration
+  title: Provide German UI labels and error strings
+  description: Verify that the calculator UI and relevant errors use German-language text.
+  preconditions:
+    - The calculator UI is available.
+  steps:
+    - Inspect visible labels.
+    - Trigger a representative error state.
+  expected_result: Labels and relevant error strings are shown in German.
+- id: TC-SwR-025-001
+  verifies: [SwR-025]
+  level: integration
+  title: Initialize display text to zero on startup
+  description: Verify that the calculator display is initialized to 0 when the application starts.
+  preconditions:
+    - The calculator UI can be started.
+  steps:
+    - Start the calculator application.
+    - Inspect the display text.
+  expected_result: The display text is initialized to 0.
 - id: ATC-StR-001-001
   validates: [StR-001]
   level: acceptance
