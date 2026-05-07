@@ -200,6 +200,24 @@ links:
 - type: impacts
   from: CR-StR-001-002
   to: SwR-008
+- type: impacts
+  from: CR-StR-012-002
+  to: StR-012
+- type: impacts
+  from: CR-StR-012-002
+  to: StR-019
+- type: impacts
+  from: CR-StR-012-002
+  to: SyR-011
+- type: impacts
+  from: CR-StR-012-002
+  to: SyR-018
+- type: impacts
+  from: CR-StR-012-002
+  to: SwR-011
+- type: impacts
+  from: CR-StR-012-002
+  to: SwR-018
 - type: derives
   from: SwR-010
   to: SyR-010

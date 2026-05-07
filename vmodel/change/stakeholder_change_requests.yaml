@@ -24,3 +24,31 @@
     decided_by: user
     decision_date: 2026-05-06
     notes: Example change accepted for process demonstration.
+- id: CR-StR-012-002
+  type: modify_acceptance_criteria
+  target_requirement: StR-012
+  target_version: 1
+  proposed_version: 2
+  title: Constrain equals control to the bottom-right corner of the calculator keypad
+  requested_by: user
+  date: 2026-05-07
+  reason: >
+    The user wants the calculator layout to explicitly place the equals control
+    in the bottom-right corner.
+  proposed_change_summary: >
+    Extend StR-012 with a layout-oriented acceptance criterion that constrains
+    the initial GUI so that the equals control is shown in the bottom-right
+    corner of the calculator keypad.
+  status: user_review_required
+  affected_items:
+    stakeholder_requirements: [StR-012, StR-019]
+    system_requirements: [SyR-011, SyR-018]
+    software_requirements: [SwR-011, SwR-018]
+    architecture_elements: [DDS-011, DDS-018]
+    tests: [TC-SyR-011-001, TC-SyR-018-001, TC-SwR-011-001, TC-SwR-018-001]
+    code_files: [src/calculator_demo/ui.py, tests/unit/test_calculator_ui_spec.py]
+  decision:
+    status: pending_user_clarification
+    decided_by: null
+    decision_date: null
+    notes: Awaiting clarification of layout scope and acceptance details.

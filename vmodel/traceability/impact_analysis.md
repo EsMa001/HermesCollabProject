@@ -33,3 +33,54 @@ The user requested explicit persistence of run metadata:
 ## Recommendation
 
 Accept the change and update downstream requirements and tests before opening an implementation branch.
+
+---
+
+# Impact Analysis CR-StR-012-002
+
+## Changed Stakeholder Requirement
+
+- `StR-012`: Graphical user interface
+
+## Change Summary
+
+The user requested a GUI layout constraint for the calculator:
+- the equals control shall be placed in the bottom-right corner
+- this shall be made explicit already at stakeholder-requirement level
+
+## Affected System Requirements
+
+- `SyR-011`: Provide classical calculator GUI
+- `SyR-018`: Provide clear and equals controls
+
+## Affected Software Requirements
+
+- `SwR-011`: Compose Tkinter calculator UI elements
+- `SwR-018`: Implement Clear and equals actions
+
+## Affected Architecture / Tests / Code
+
+- `DDS-011`: Tkinter calculator widget composition
+- `DDS-018`: Dedicated Clear and equals actions
+- `TC-SyR-011-001`, `TC-SyR-018-001`
+- `TC-SwR-011-001`, `TC-SwR-018-001`
+- `src/calculator_demo/ui.py`
+- `tests/unit/test_calculator_ui_spec.py`
+
+## Assessment
+
+- Implementation change required: **likely yes**
+- Test update required: **yes**
+- Architecture update required: **minor**
+- Breaking change: **no functional change expected**
+- User approval required before implementation: **yes**
+
+## Open Clarifications
+
+- Is only the initial visual position relevant, or also behavior after window resizing?
+- Is the intended UI change the simple swap of `'+'` and `'='` within the existing 4x4 keypad layout?
+- Is this a mandatory acceptance constraint or a preferred layout convention?
+
+## Recommendation
+
+Keep the stakeholder change in proposed state until the layout scope is clarified, then accept the CR and derive updated SyR/SwR/test artifacts.
