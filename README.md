@@ -79,3 +79,13 @@ The repository contains an initial worked example for:
 - test specifications
 - traceability matrix
 - verification report
+
+## Calculator Example Branch Note
+
+On branch `hermes/calculator-example`, the calculator-specific stakeholder
+requirement set from the earlier chat is stored separately in:
+
+- `vmodel/requirements/calculator_stakeholder_requirements.yaml`
+
+This keeps the original worked example intact while the calculator-specific
+requirement chain is derived in the next steps.
