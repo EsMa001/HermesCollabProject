@@ -58,3 +58,85 @@
     - version: 1
       date: 2026-05-06
       reason: User specified that the project shall be a Python project.
+- id: StR-010
+  version: 1
+  title: Basic arithmetic calculation
+  statement: >
+    As a user, I want to calculate the result of a basic arithmetic operation on
+    two input values, so that I can use the example as a simple, understandable
+    end-to-end calculator workflow.
+  rationale: >
+    A minimal calculator example should cover the core user goal with a small,
+    easily verifiable functional scope.
+  priority: must
+  status: accepted
+  owner: user
+  acceptance_criteria:
+    - id: AC-StR-010-01
+      statement: The user can request addition of two numbers.
+    - id: AC-StR-010-02
+      statement: The user can request subtraction of two numbers.
+    - id: AC-StR-010-03
+      statement: The user can request multiplication of two numbers.
+    - id: AC-StR-010-04
+      statement: The user can request division of two numbers.
+    - id: AC-StR-010-05
+      statement: The system returns the numerically correct result for each supported operation.
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Initial stakeholder requirement for calculator example.
+- id: StR-011
+  version: 1
+  title: Clear result presentation
+  statement: >
+    As a user, I want the calculator result to be presented clearly together
+    with the selected operation and input values, so that I can immediately
+    verify what was computed.
+  rationale: >
+    A transparent result presentation reduces ambiguity and supports simple
+    manual verification of the example behavior.
+  priority: should
+  status: accepted
+  owner: user
+  acceptance_criteria:
+    - id: AC-StR-011-01
+      statement: The output identifies the two input values used for the calculation.
+    - id: AC-StR-011-02
+      statement: The output identifies the selected arithmetic operation.
+    - id: AC-StR-011-03
+      statement: The output shows the computed result in the same user-visible response.
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Initial stakeholder requirement for calculator example result presentation.
+- id: StR-012
+  version: 1
+  title: Safe handling of invalid arithmetic requests
+  statement: >
+    As a user, I want invalid arithmetic requests to be rejected with an
+    understandable error message, so that I do not mistake invalid input for a
+    valid calculation result.
+  rationale: >
+    Even a minimal calculator example should behave safely and predictably for
+    invalid inputs such as division by zero or unsupported operations.
+  priority: must
+  status: accepted
+  owner: user
+  acceptance_criteria:
+    - id: AC-StR-012-01
+      statement: Division by zero is rejected with a clear error message.
+    - id: AC-StR-012-02
+      statement: Unsupported operations are rejected with a clear error message.
+    - id: AC-StR-012-03
+      statement: Invalid requests do not produce a misleading numeric result.
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-07
+      reason: Initial stakeholder requirement for calculator example error handling.
