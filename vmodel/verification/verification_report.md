@@ -4,6 +4,7 @@
 
 - Initial V-Model-light scaffold
 - Example change workflow `CR-StR-001-002`
+- Implemented minimal workflow slice for configuration loading and reproducibility metadata
 
 ## Affected Requirements
 
@@ -33,10 +34,8 @@
 
 ## Traceability Waivers
 
-- `StR-001` — Downstream implementation is intentionally pending after process setup.
-- `SwR-007` — No production implementation yet; test specs and design placeholders created first.
-- `SwR-008` — No production implementation yet; report behavior remains a future slice.
+- None.
 
 ## Acceptance Recommendation
 
-Process setup artifacts are ready for review. Do not start implementation before a concrete SwR slice is approved on a non-main branch.
+The current minimal workflow slice is ready for review with trace-linked implementation artifacts. Before acceptance of further changes, re-run the local validators and tests on the working tree. The next recommended increment is an end-to-end run entry point that exercises configuration loading, metadata persistence and report generation together.
