@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import shutil
 import subprocess
 import sys
@@ -25,6 +26,9 @@ def build_indexes() -> dict[str, dict[str, dict]]:
 
 
 def current_branch() -> str | None:
+    override = os.environ.get('HERMES_BRANCH_OVERRIDE')
+    if override:
+        return override
     try:
         return subprocess.check_output(['git', 'branch', '--show-current'], cwd=REPO_ROOT, text=True).strip() or None
     except Exception:
