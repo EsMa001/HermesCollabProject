@@ -68,3 +68,231 @@
   status: accepted_by_agent
   assumptions: []
   open_questions: []
+- id: SwR-010
+  version: 1
+  parent_ids:
+    - SyR-010
+  title: Implement arithmetic core operation execution
+  statement: >
+    The software shall implement a calculator core operation that accepts two
+    operands and a supported operator and returns the correct numeric result.
+  rationale: >
+    The arithmetic core is the software realization of the supported operation
+    set.
+  verification_method: unit_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-011
+  version: 1
+  parent_ids:
+    - SyR-011
+  title: Render calculator GUI controls and display
+  statement: >
+    The software shall render digit buttons, operator buttons and a display in
+    the Tkinter calculator user interface.
+  rationale: >
+    The GUI elements need an explicit software realization.
+  verification_method: integration_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-012
+  version: 1
+  parent_ids:
+    - SyR-012
+  title: Enforce simple-operation interaction model
+  statement: >
+    The software shall implement a sequential calculator interaction model that
+    supports simple operations only and does not parse advanced expressions or
+    excluded features.
+  rationale: >
+    The first-scope interaction must remain constrained and predictable.
+  verification_method: integration_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-013
+  version: 1
+  parent_ids:
+    - SyR-013
+  title: Avoid network and multi-user dependencies
+  statement: >
+    The software shall execute as a local desktop process without requiring any
+    network communication or multi-user coordination components.
+  rationale: >
+    The software implementation must preserve the intended local single-user scope.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-014
+  version: 1
+  parent_ids:
+    - SyR-014
+  title: Provide Tkinter application entry point
+  statement: >
+    The software shall provide a Tkinter-based calculator application entry
+    point on the repository's Python baseline.
+  rationale: >
+    A concrete application entry point is needed to realize the Tkinter desktop
+    concept.
+  verification_method: integration_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-015
+  version: 1
+  parent_ids:
+    - SyR-015
+  title: Parse integer and decimal input
+  statement: >
+    The software shall parse, store and process both integer and decimal input
+    values within the calculator session state.
+  rationale: >
+    Numeric input handling must support the number types required by the system.
+  verification_method: unit_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-016
+  version: 1
+  parent_ids:
+    - SyR-016
+  title: Detect division by zero before result output
+  statement: >
+    The software shall detect division-by-zero requests and produce a user-
+    visible error state instead of a numeric result.
+  rationale: >
+    The error case must be handled explicitly in the software behavior.
+  verification_method: unit_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-017
+  version: 1
+  parent_ids:
+    - SyR-017
+  title: Provide understandable invalid-request errors
+  statement: >
+    The software shall prevent invalid interaction sequences where practical and
+    shall map remaining invalid requests to understandable error text.
+  rationale: >
+    User-facing error behavior needs an explicit software-level definition.
+  verification_method: integration_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-018
+  version: 1
+  parent_ids:
+    - SyR-018
+  title: Implement Clear and equals actions
+  statement: >
+    The software shall implement Clear and equals actions that update the
+    calculator state and display appropriately.
+  rationale: >
+    These controls require explicit action logic in the software.
+  verification_method: integration_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-019
+  version: 1
+  parent_ids:
+    - SyR-019
+  title: Reuse previous result in session state
+  statement: >
+    The software shall retain the last computed result in calculator session
+    state so that it can be reused by a subsequent operation.
+  rationale: >
+    Result reuse depends on explicit session-state behavior.
+  verification_method: integration_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-020
+  version: 1
+  parent_ids:
+    - SyR-020
+  title: Maintain explicit trace links for calculator artifacts
+  statement: >
+    The software-related project artifacts shall maintain explicit links between
+    calculator requirements, planned implementation elements and automated
+    tests.
+  rationale: >
+    The calculator slice must remain demonstrably traceable at software level.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-021
+  version: 1
+  parent_ids:
+    - SyR-021
+  title: Separate calculator core and GUI modules
+  statement: >
+    The software shall implement the calculator core logic and the Tkinter GUI
+    in separate modules with clear responsibilities.
+  rationale: >
+    Software modularity realizes the required separation of concerns.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-022
+  version: 1
+  parent_ids:
+    - SyR-022
+  title: Implement automated tests for logic and selected GUI behavior
+  statement: >
+    The software shall provide automated tests for arithmetic logic and for
+    selected calculator GUI behaviors.
+  rationale: >
+    The verification objective must be realized as software-level automated tests.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-023
+  version: 1
+  parent_ids:
+    - SyR-023
+  title: Format displayed results without unnecessary trailing decimals
+  statement: >
+    The software shall format displayed calculator results without unnecessary
+    trailing decimal places while preserving the correct numeric value.
+  rationale: >
+    Result formatting needs explicit implementation rules.
+  verification_method: unit_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-024
+  version: 1
+  parent_ids:
+    - SyR-024
+  title: Provide German-language UI and error strings
+  statement: >
+    The software shall provide German-language labels and relevant error strings
+    for the calculator user interface.
+  rationale: >
+    User-facing language support must be implemented explicitly.
+  verification_method: integration_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SwR-025
+  version: 1
+  parent_ids:
+    - SyR-025
+  title: Initialize calculator display to zero
+  statement: >
+    The software shall initialize the calculator display to the text value 0 at
+    application startup.
+  rationale: >
+    Startup state must be realized explicitly in the software.
+  verification_method: integration_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []

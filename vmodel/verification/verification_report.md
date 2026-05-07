@@ -52,6 +52,22 @@
 - `SwR-003` — Implement automated tests in Python (accepted_by_agent)
 - `SwR-007` — Persist run metadata (accepted_by_agent)
 - `SwR-008` — Present run metadata in report output (accepted_by_agent)
+- `SwR-010` — Implement arithmetic core operation execution (accepted_by_agent)
+- `SwR-011` — Render calculator GUI controls and display (accepted_by_agent)
+- `SwR-012` — Enforce simple-operation interaction model (accepted_by_agent)
+- `SwR-013` — Avoid network and multi-user dependencies (accepted_by_agent)
+- `SwR-014` — Provide Tkinter application entry point (accepted_by_agent)
+- `SwR-015` — Parse integer and decimal input (accepted_by_agent)
+- `SwR-016` — Detect division by zero before result output (accepted_by_agent)
+- `SwR-017` — Provide understandable invalid-request errors (accepted_by_agent)
+- `SwR-018` — Implement Clear and equals actions (accepted_by_agent)
+- `SwR-019` — Reuse previous result in session state (accepted_by_agent)
+- `SwR-020` — Maintain explicit trace links for calculator artifacts (accepted_by_agent)
+- `SwR-021` — Separate calculator core and GUI modules (accepted_by_agent)
+- `SwR-022` — Implement automated tests for logic and selected GUI behavior (accepted_by_agent)
+- `SwR-023` — Format displayed results without unnecessary trailing decimals (accepted_by_agent)
+- `SwR-024` — Provide German-language UI and error strings (accepted_by_agent)
+- `SwR-025` — Initialize calculator display to zero (accepted_by_agent)
 
 ## Specified Tests
 
@@ -79,27 +95,28 @@
 - `TC-SyR-023-001` -> SyR-023 [system]
 - `TC-SyR-024-001` -> SyR-024 [system]
 - `TC-SyR-025-001` -> SyR-025 [system]
+- `TC-SwR-010-001` -> SwR-010 [unit]
+- `TC-SwR-011-001` -> SwR-011 [integration]
+- `TC-SwR-012-001` -> SwR-012 [integration]
+- `TC-SwR-013-001` -> SwR-013 [analysis]
+- `TC-SwR-014-001` -> SwR-014 [integration]
+- `TC-SwR-015-001` -> SwR-015 [unit]
+- `TC-SwR-016-001` -> SwR-016 [unit]
+- `TC-SwR-017-001` -> SwR-017 [integration]
+- `TC-SwR-018-001` -> SwR-018 [integration]
+- `TC-SwR-019-001` -> SwR-019 [integration]
+- `TC-SwR-020-001` -> SwR-020 [analysis]
+- `TC-SwR-021-001` -> SwR-021 [analysis]
+- `TC-SwR-022-001` -> SwR-022 [analysis]
+- `TC-SwR-023-001` -> SwR-023 [unit]
+- `TC-SwR-024-001` -> SwR-024 [integration]
+- `TC-SwR-025-001` -> SwR-025 [integration]
 - `ATC-StR-001-001` -> StR-001 [acceptance]
 - `ATC-StR-002-001` -> StR-002 [acceptance]
 
 ## Traceability Waivers
 
-- `SyR-010` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-011` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-012` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-013` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-014` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-015` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-016` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-017` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-018` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-019` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-020` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-021` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-022` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-023` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-024` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
-- `SyR-025` — Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+- None.
 
 ## Acceptance Recommendation
 
