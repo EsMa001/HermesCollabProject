@@ -92,4 +92,40 @@ links:
   - type: impacts
     from: CR-StR-001-002
     to: SwR-008
-waivers: []
+waivers:
+  - requirement_id: StR-010
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-011
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-012
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-013
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-014
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-015
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-016
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-017
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-018
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-019
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-020
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-021
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-022
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-023
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-024
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-025
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-026
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: StR-027
+    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.

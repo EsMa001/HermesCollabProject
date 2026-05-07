@@ -83,9 +83,9 @@ The repository contains an initial worked example for:
 ## Calculator Example Branch Note
 
 On branch `hermes/calculator-example`, the calculator-specific stakeholder
-requirement set from the earlier chat is stored separately in:
+requirements are merged into the main file:
 
-- `vmodel/requirements/calculator_stakeholder_requirements.yaml`
+- `vmodel/requirements/stakeholder_requirements.yaml`
 
-This keeps the original worked example intact while the calculator-specific
-requirement chain is derived in the next steps.
+Temporary traceability waivers exist for the calculator-only `StR-*` entries
+until their derived `SyR-*` chain is created in the next steps.
