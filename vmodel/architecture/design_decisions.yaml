@@ -33,7 +33,7 @@ decisions:
     title: Tkinter calculator widget composition
     relates_to: [SwR-011]
     status: accepted
-    description: Build the calculator UI from Tkinter widgets for the display, digit controls and operator controls.
+    description: Build the calculator UI from Tkinter widgets for the display, digit controls and operator controls, with the initial 4x4 keypad layout placing the equals control in the bottom-right position.
   - id: DDS-012
     title: Sequential interaction state model
     relates_to: [SwR-012]
@@ -68,7 +68,7 @@ decisions:
     title: Dedicated Clear and equals actions
     relates_to: [SwR-018]
     status: accepted
-    description: Implement Clear and equals as explicit actions that update calculator state and display deterministically.
+    description: Implement Clear and equals as explicit actions that update calculator state and display deterministically, while mapping the equals action to the bottom-right button in the initial keypad layout.
   - id: DDS-019
     title: Session-state result retention
     relates_to: [SwR-019]

@@ -84,13 +84,14 @@
   assumptions: []
   open_questions: []
 - id: SwR-011
-  version: 1
+  version: 2
   parent_ids:
     - SyR-011
   title: Render calculator GUI controls and display
   statement: >
     The software shall render digit buttons, operator buttons and a display in
-    the Tkinter calculator user interface.
+    the Tkinter calculator user interface. The initial 4x4 keypad layout shall
+    render the equals control in the bottom-right button position.
   rationale: >
     The GUI elements need an explicit software realization.
   verification_method: integration_test
@@ -184,13 +185,14 @@
   assumptions: []
   open_questions: []
 - id: SwR-018
-  version: 1
+  version: 2
   parent_ids:
     - SyR-018
   title: Implement Clear and equals actions
   statement: >
     The software shall implement Clear and equals actions that update the
-    calculator state and display appropriately.
+    calculator state and display appropriately, while exposing the equals
+    action through the bottom-right button in the initial 4x4 keypad layout.
   rationale: >
     These controls require explicit action logic in the software.
   verification_method: integration_test

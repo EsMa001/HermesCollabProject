@@ -116,7 +116,7 @@
   rationale: >
     A classic GUI makes the example directly usable and easy to demonstrate.
   priority: must
-  status: proposed
+  status: accepted
   owner: Max
   acceptance_criteria:
     - id: AC-StR-012-01
@@ -128,17 +128,14 @@
     - id: AC-StR-012-04
       statement: The initial calculator keypad layout places the equals control in the bottom-right corner.
   assumptions: []
-  open_questions:
-    - Shall the requirement constrain only the initial visual position of the equals control, or also a stable position after window resizing?
-    - Is the current intended change simply to swap the positions of '+' and '=' in the existing 4x4 keypad layout?
-    - Shall this layout constraint be mandatory for acceptance of the first scope, or only a preferred usability rule?
+  open_questions: []
   change_history:
     - version: 1
       date: 2026-05-07
       reason: Merged from the detailed calculator stakeholder requirement draft and expands the earlier simplified calculator UI statement.
     - version: 2
       date: 2026-05-07
-      reason: Proposed via CR-StR-012-002 to constrain the equals control location in the calculator keypad.
+      reason: Accepted via CR-StR-012-002 to constrain the initial keypad layout so the equals control is placed in the bottom-right corner as a mandatory requirement.
   change_request:
     - CR-StR-012-002
 - id: StR-013
