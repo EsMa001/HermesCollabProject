@@ -43,6 +43,32 @@ python3 tools/generate_verification_report.py
 python3 -m pytest tests -q
 ```
 
+## Codex Integration
+
+Yes, using Codex for implementation from approved requirements makes sense **if Codex is constrained by the requirements chain**.
+
+Recommended flow in this repo:
+
+1. approve stakeholder change
+2. derive `SyR-*` and `SwR-*`
+3. add linked `TC-*`
+4. work on a non-main branch
+5. run Codex only for explicit `SwR-*` scope
+
+Preflight and prompt generation:
+
+```bash
+python3 tools/run_codex_for_swr.py --swr SwR-001 --check-only
+```
+
+If Codex CLI is installed and configured:
+
+```bash
+python3 tools/run_codex_for_swr.py --swr SwR-001 --full-auto
+```
+
+This tool checks branch, requirement status, traceability and linked tests before allowing Codex execution.
+
 ## Example Change Flow Included
 
 The repository contains an initial worked example for:

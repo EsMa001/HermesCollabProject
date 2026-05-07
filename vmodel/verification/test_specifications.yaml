@@ -19,6 +19,40 @@
   steps:
     - Start the run using an explicit configuration path.
   expected_result: The run starts successfully using the selected configuration artifact.
+- id: TC-SyR-002-001
+  verifies: [SyR-002]
+  level: system
+  title: Verify Python implementation stack usage
+  description: Verify that the repository implementation, tests and tooling use Python as the primary stack.
+  preconditions:
+    - Repository baseline files exist.
+  steps:
+    - Inspect production code layout.
+    - Inspect test layout and runner configuration.
+    - Inspect repository tooling scripts.
+  expected_result: Production code, tests and tooling are all defined in Python.
+- id: TC-SwR-002-001
+  verifies: [SwR-002]
+  level: unit
+  title: Verify production modules are Python files
+  description: Verify that production modules are stored as Python source files in the repository code layout.
+  preconditions:
+    - At least one production module exists.
+  steps:
+    - Enumerate production modules in the code root.
+    - Check file extensions and language conventions.
+  expected_result: Production modules are implemented as `.py` files.
+- id: TC-SwR-003-001
+  verifies: [SwR-003]
+  level: unit
+  title: Verify automated tests are Python test modules
+  description: Verify that automated tests follow Python module and pytest conventions.
+  preconditions:
+    - At least one automated test module exists.
+  steps:
+    - Enumerate test modules.
+    - Check naming and Python module conventions.
+  expected_result: Automated tests are implemented as Python test modules.
 - id: TC-SwR-007-001
   verifies: [SwR-007]
   level: unit
@@ -66,3 +100,13 @@
     - AC-StR-001-04
     - AC-StR-001-05
   expected_result: The run report and output folder contain sufficient metadata to reproduce and audit the run.
+- id: ATC-StR-002-001
+  validates: [StR-002]
+  level: acceptance
+  title: User acceptance test for Python project baseline
+  description: Validate that the project baseline, examples and implementation conventions are Python-based.
+  acceptance_criteria:
+    - AC-StR-002-01
+    - AC-StR-002-02
+    - AC-StR-002-03
+  expected_result: The repository baseline consistently uses Python for implementation, tests and tooling.

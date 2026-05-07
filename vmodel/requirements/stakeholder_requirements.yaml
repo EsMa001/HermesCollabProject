@@ -32,3 +32,29 @@
       reason: Accepted via CR-StR-001-002 to add explicit run metadata.
   change_request:
     - CR-StR-001-002
+- id: StR-002
+  version: 1
+  title: Python implementation baseline
+  statement: >
+    As a project owner, I want the project implementation baseline to be Python,
+    so that requirements, implementation, tests and tooling are aligned to one
+    language stack.
+  rationale: >
+    A single primary language reduces integration friction and keeps Codex
+    handoff, tests and review conventions consistent.
+  priority: must
+  status: accepted
+  owner: user
+  acceptance_criteria:
+    - id: AC-StR-002-01
+      statement: Production code is implemented in Python.
+    - id: AC-StR-002-02
+      statement: Automated tests for production code are implemented in Python.
+    - id: AC-StR-002-03
+      statement: Repository tooling and examples assume Python as the primary implementation language.
+  assumptions: []
+  open_questions: []
+  change_history:
+    - version: 1
+      date: 2026-05-06
+      reason: User specified that the project shall be a Python project.

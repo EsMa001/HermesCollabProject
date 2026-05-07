@@ -3,11 +3,20 @@ links:
     from: SyR-001
     to: StR-001
   - type: derives
+    from: SyR-002
+    to: StR-002
+  - type: derives
     from: SyR-004
     to: StR-001
   - type: derives
     from: SwR-001
     to: SyR-001
+  - type: derives
+    from: SwR-002
+    to: SyR-002
+  - type: derives
+    from: SwR-003
+    to: SyR-002
   - type: derives
     from: SwR-007
     to: SyR-004
@@ -21,6 +30,15 @@ links:
     from: TC-SyR-001-001
     to: SyR-001
   - type: verifies
+    from: TC-SyR-002-001
+    to: SyR-002
+  - type: verifies
+    from: TC-SwR-002-001
+    to: SwR-002
+  - type: verifies
+    from: TC-SwR-003-001
+    to: SwR-003
+  - type: verifies
     from: TC-SwR-007-001
     to: SwR-007
   - type: verifies
@@ -32,14 +50,35 @@ links:
   - type: validates
     from: ATC-StR-001-001
     to: StR-001
+  - type: validates
+    from: ATC-StR-002-001
+    to: StR-002
   - type: implements
     from: DDS-001
     to: SwR-001
+  - type: implements
+    from: DDS-002
+    to: SwR-002
+  - type: implements
+    from: DDS-003
+    to: SwR-003
   - type: implements
     from: DDS-007
     to: SwR-007
   - type: implements
     from: DDS-008
+    to: SwR-008
+  - type: implements
+    from: src/workflow_demo/__init__.py
+    to: SwR-002
+  - type: implements
+    from: src/workflow_demo/config_loader.py
+    to: SwR-001
+  - type: implements
+    from: src/workflow_demo/run_workflow.py
+    to: SwR-007
+  - type: implements
+    from: src/workflow_demo/run_workflow.py
     to: SwR-008
   - type: impacts
     from: CR-StR-001-002

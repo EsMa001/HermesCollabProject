@@ -41,4 +41,18 @@ Production code may only be created or modified if the change is traceable to at
 - `python3 tools/validate_code_links.py`
 - `python3 tools/generate_trace_matrix.py`
 - `python3 tools/generate_verification_report.py`
+- `python3 tools/run_codex_for_swr.py --swr <SwR-ID> --check-only`
 - `pytest`
+
+## Codex-Specific Rule
+
+Codex may only be invoked through the repository preflight gate:
+
+- `python3 tools/run_codex_for_swr.py --swr <SwR-ID> [--check-only|--full-auto]`
+
+The gate must reject execution when:
+- branch is `main`
+- `SwR-*` is not accepted
+- parent `SyR-*` / `StR-*` chain is not accepted
+- linked `TC-*` does not exist
+- open questions or assumptions remain
