@@ -9,12 +9,15 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 
 
 def test_codex_preflight_check_only_passes_on_branch() -> None:
+    env = os.environ.copy()
+    env['HERMES_BRANCH_OVERRIDE'] = 'hermes/test-swr-gate'
     result = subprocess.run(
         [sys.executable, 'tools/run_codex_for_swr.py', '--swr', 'SwR-001', '--check-only'],
         cwd=REPO_ROOT,
         text=True,
         capture_output=True,
         check=False,
+        env=env,
     )
     assert result.returncode == 0, result.stdout + result.stderr
     assert 'Preflight passed for: SwR-001' in result.stdout
@@ -28,6 +31,7 @@ def test_codex_preflight_check_only_passes_on_branch() -> None:
 def test_codex_execute_fails_cleanly_when_cli_missing() -> None:
     env = os.environ.copy()
     env['PATH'] = '/usr/bin:/bin'
+    env['HERMES_BRANCH_OVERRIDE'] = 'hermes/test-swr-gate'
     result = subprocess.run(
         [sys.executable, 'tools/run_codex_for_swr.py', '--swr', 'SwR-001'],
         cwd=REPO_ROOT,
