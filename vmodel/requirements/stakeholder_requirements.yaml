@@ -108,7 +108,7 @@
       date: 2026-05-07
       reason: Merged from the detailed calculator stakeholder requirement draft and replaces the previous simplified calculator requirement set.
 - id: StR-012
-  version: 1
+  version: 2
   title: Graphical user interface
   statement: >
     The calculator shall provide a classic graphical calculator user interface
@@ -116,7 +116,7 @@
   rationale: >
     A classic GUI makes the example directly usable and easy to demonstrate.
   priority: must
-  status: accepted
+  status: proposed
   owner: Max
   acceptance_criteria:
     - id: AC-StR-012-01
@@ -125,12 +125,22 @@
       statement: The user interface provides operator buttons.
     - id: AC-StR-012-03
       statement: The user interface provides a visible display for input and results.
+    - id: AC-StR-012-04
+      statement: The initial calculator keypad layout places the equals control in the bottom-right corner.
   assumptions: []
-  open_questions: []
+  open_questions:
+    - Shall the requirement constrain only the initial visual position of the equals control, or also a stable position after window resizing?
+    - Is the current intended change simply to swap the positions of '+' and '=' in the existing 4x4 keypad layout?
+    - Shall this layout constraint be mandatory for acceptance of the first scope, or only a preferred usability rule?
   change_history:
     - version: 1
       date: 2026-05-07
       reason: Merged from the detailed calculator stakeholder requirement draft and expands the earlier simplified calculator UI statement.
+    - version: 2
+      date: 2026-05-07
+      reason: Proposed via CR-StR-012-002 to constrain the equals control location in the calculator keypad.
+  change_request:
+    - CR-StR-012-002
 - id: StR-013
   version: 1
   title: Interaction concept
