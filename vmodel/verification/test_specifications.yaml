@@ -88,6 +88,177 @@
     - Complete the run.
     - Inspect metadata and report artifacts.
   expected_result: Persisted artifacts include software version, configuration version and input references.
+- id: TC-SyR-010-001
+  verifies: [SyR-010]
+  level: system
+  title: Execute supported arithmetic operations
+  description: Verify that the calculator returns correct results for the four supported arithmetic operations.
+  preconditions:
+    - The calculator application is available.
+  steps:
+    - Enter two operands.
+    - Execute addition, subtraction, multiplication and division.
+    - Inspect the displayed results.
+  expected_result: Each supported operation returns the numerically correct result.
+- id: TC-SyR-011-001
+  verifies: [SyR-011]
+  level: system
+  title: Show classic calculator GUI elements
+  description: Verify that the calculator GUI exposes digit buttons, operator buttons and a display.
+  preconditions:
+    - The calculator application is started.
+  steps:
+    - Inspect the visible user interface.
+  expected_result: The UI contains digit buttons, operator buttons and a visible display.
+- id: TC-SyR-012-001
+  verifies: [SyR-012]
+  level: analysis
+  title: Confirm restricted first-scope feature set
+  description: Verify that unsupported advanced calculator features are absent from the first-scope design and implementation scope.
+  preconditions:
+    - Requirements and design artifacts are available.
+  steps:
+    - Inspect scope statements and derived artifacts.
+    - Confirm that advanced features are not included.
+  expected_result: Only simple calculator operations are in scope, and excluded features are absent.
+- id: TC-SyR-013-001
+  verifies: [SyR-013]
+  level: analysis
+  title: Confirm local single-user deployment scope
+  description: Verify that the calculator is defined as a local single-user application without network or multi-user behavior.
+  preconditions:
+    - Requirements and architecture artifacts are available.
+  steps:
+    - Inspect requirements and architecture statements.
+  expected_result: The solution scope remains local, single-user and offline.
+- id: TC-SyR-014-001
+  verifies: [SyR-014]
+  level: analysis
+  title: Confirm Tkinter-based desktop GUI stack
+  description: Verify that the calculator GUI is derived as a Tkinter desktop application on the Python baseline.
+  preconditions:
+    - Requirements and architecture artifacts are available.
+  steps:
+    - Inspect the derived system requirements and architecture decisions.
+  expected_result: The desktop GUI technology is Tkinter and the implementation stack remains Python-based.
+- id: TC-SyR-015-001
+  verifies: [SyR-015]
+  level: system
+  title: Accept integer and decimal operands
+  description: Verify that the calculator can process both integer and decimal operands.
+  preconditions:
+    - The calculator application is available.
+  steps:
+    - Execute calculations with integer operands.
+    - Execute calculations with decimal operands.
+  expected_result: Both integer and decimal operand cases are processed correctly.
+- id: TC-SyR-016-001
+  verifies: [SyR-016]
+  level: system
+  title: Reject division by zero
+  description: Verify that division by zero produces a clear user-visible error instead of a numeric result.
+  preconditions:
+    - The calculator application is available.
+  steps:
+    - Enter a division by zero request.
+    - Inspect the user-visible response.
+  expected_result: The request is rejected and the user receives a clear error indication.
+- id: TC-SyR-017-001
+  verifies: [SyR-017]
+  level: system
+  title: Handle invalid requests predictably
+  description: Verify that invalid requests are prevented where practical and otherwise produce understandable user feedback.
+  preconditions:
+    - The calculator application is available.
+  steps:
+    - Trigger representative invalid interaction cases.
+    - Inspect the resulting user feedback.
+  expected_result: Invalid requests do not lead to misleading results and produce understandable feedback.
+- id: TC-SyR-018-001
+  verifies: [SyR-018]
+  level: system
+  title: Provide clear and equals controls
+  description: Verify that the calculator UI provides Clear and equals controls and that they can be invoked by the user.
+  preconditions:
+    - The calculator application is started.
+  steps:
+    - Inspect the UI for Clear and equals controls.
+    - Invoke each control once.
+  expected_result: Clear and equals controls are available and invokable.
+- id: TC-SyR-019-001
+  verifies: [SyR-019]
+  level: system
+  title: Reuse previous result for next operation
+  description: Verify that a computed result can be reused directly in a subsequent calculator operation.
+  preconditions:
+    - The calculator application is available.
+  steps:
+    - Compute an initial result.
+    - Continue with a second operation using the displayed result.
+  expected_result: The displayed result can be reused without manual re-entry.
+- id: TC-SyR-020-001
+  verifies: [SyR-020]
+  level: analysis
+  title: Confirm requirement-to-test traceability structure
+  description: Verify that project artifacts maintain explicit traceability between requirements, implementation and tests.
+  preconditions:
+    - Traceability artifacts are available.
+  steps:
+    - Inspect requirement, traceability and verification artifacts.
+  expected_result: The calculator slice is represented by explicit traceability links across lifecycle artifacts.
+- id: TC-SyR-021-001
+  verifies: [SyR-021]
+  level: analysis
+  title: Confirm separation of calculation core and GUI
+  description: Verify that derived artifacts require a separation between calculation logic and GUI responsibilities.
+  preconditions:
+    - Requirements and architecture artifacts are available.
+  steps:
+    - Inspect derived requirements and architecture decisions.
+  expected_result: Calculation logic and GUI responsibilities are defined as separate concerns.
+- id: TC-SyR-022-001
+  verifies: [SyR-022]
+  level: analysis
+  title: Confirm automated verification scope
+  description: Verify that automated verification is required for calculation logic and selected GUI behavior.
+  preconditions:
+    - Requirements and verification artifacts are available.
+  steps:
+    - Inspect derived requirements and planned test artifacts.
+  expected_result: Automated verification scope includes calculation logic and selected GUI behavior.
+- id: TC-SyR-023-001
+  verifies: [SyR-023]
+  level: system
+  title: Format results without unnecessary trailing decimals
+  description: Verify that displayed results are user-friendly and omit unnecessary trailing decimal places.
+  preconditions:
+    - The calculator application is available.
+  steps:
+    - Execute representative calculations with integer and decimal outputs.
+    - Inspect the displayed result formatting.
+  expected_result: Results remain numerically correct and omit unnecessary trailing decimal places.
+- id: TC-SyR-024-001
+  verifies: [SyR-024]
+  level: system
+  title: Present German-language UI text
+  description: Verify that the calculator UI labels and relevant error messages are presented in German.
+  preconditions:
+    - The calculator application is started.
+  steps:
+    - Inspect user-facing labels.
+    - Trigger a representative error case.
+  expected_result: User-facing labels and relevant errors are presented in German.
+- id: TC-SyR-025-001
+  verifies: [SyR-025]
+  level: system
+  title: Start with display value zero
+  description: Verify that the calculator starts with a defined display value of 0.
+  preconditions:
+    - The calculator application can be started.
+  steps:
+    - Start the application.
+    - Inspect the initial display.
+  expected_result: The display shows 0 after startup.
 - id: ATC-StR-001-001
   validates: [StR-001]
   level: acceptance
