@@ -12,13 +12,20 @@ def generate() -> int:
         '',
         '## Scope',
         '',
-        '- Initial V-Model-light scaffold',
-        '- Example change workflow `CR-StR-001-002`',
-        '- Implemented minimal workflow slice for configuration loading and reproducibility metadata',
+        '- Current repository requirement, traceability and verification artifacts',
+        '- Initial worked example `CR-StR-001-002`',
+    ]
+    if any('calculator' in ' '.join([
+        str(item.get('title', '')),
+        str(item.get('statement', '')),
+        str(item.get('rationale', '')),
+    ]).lower() for item in data['stakeholder']):
+        lines.append('- Calculator requirement derivation slice on the active branch')
+    lines.extend([
         '',
         '## Affected Requirements',
         '',
-    ]
+    ])
     for group in ('stakeholder', 'system', 'software'):
         for item in data[group]:
             lines.append(f"- `{item['id']}` — {item['title']} ({item['status']})")
@@ -36,7 +43,7 @@ def generate() -> int:
         '',
         '## Acceptance Recommendation',
         '',
-        'The current minimal workflow slice is ready for review with trace-linked implementation artifacts. Before acceptance of further changes, re-run the local validators and tests on the working tree. The next recommended increment is an end-to-end run entry point that exercises configuration loading, metadata persistence and report generation together.',
+        'The active branch artifacts are ready for review at their current derivation depth. Any requirement items still listed under Traceability Waivers need downstream lifecycle artifacts in a subsequent step before final implementation acceptance.',
         '',
     ])
     write_text(REPO_ROOT / 'vmodel/verification/verification_report.md', '\n'.join(lines))

@@ -9,6 +9,66 @@ links:
     from: SyR-004
     to: StR-001
   - type: derives
+    from: SyR-010
+    to: StR-010
+  - type: derives
+    from: SyR-010
+    to: StR-011
+  - type: derives
+    from: SyR-020
+    to: StR-010
+  - type: derives
+    from: SyR-011
+    to: StR-012
+  - type: derives
+    from: SyR-012
+    to: StR-013
+  - type: derives
+    from: SyR-012
+    to: StR-027
+  - type: derives
+    from: SyR-013
+    to: StR-014
+  - type: derives
+    from: SyR-014
+    to: StR-015
+  - type: derives
+    from: SyR-014
+    to: StR-002
+  - type: derives
+    from: SyR-015
+    to: StR-016
+  - type: derives
+    from: SyR-016
+    to: StR-017
+  - type: derives
+    from: SyR-017
+    to: StR-018
+  - type: derives
+    from: SyR-018
+    to: StR-019
+  - type: derives
+    from: SyR-019
+    to: StR-020
+  - type: derives
+    from: SyR-020
+    to: StR-021
+  - type: derives
+    from: SyR-021
+    to: StR-022
+  - type: derives
+    from: SyR-022
+    to: StR-023
+  - type: derives
+    from: SyR-023
+    to: StR-024
+  - type: derives
+    from: SyR-024
+    to: StR-025
+  - type: derives
+    from: SyR-025
+    to: StR-026
+  - type: derives
     from: SwR-001
     to: SyR-001
   - type: derives
@@ -47,6 +107,54 @@ links:
   - type: verifies
     from: TC-SyR-004-001
     to: SyR-004
+  - type: verifies
+    from: TC-SyR-010-001
+    to: SyR-010
+  - type: verifies
+    from: TC-SyR-011-001
+    to: SyR-011
+  - type: verifies
+    from: TC-SyR-012-001
+    to: SyR-012
+  - type: verifies
+    from: TC-SyR-013-001
+    to: SyR-013
+  - type: verifies
+    from: TC-SyR-014-001
+    to: SyR-014
+  - type: verifies
+    from: TC-SyR-015-001
+    to: SyR-015
+  - type: verifies
+    from: TC-SyR-016-001
+    to: SyR-016
+  - type: verifies
+    from: TC-SyR-017-001
+    to: SyR-017
+  - type: verifies
+    from: TC-SyR-018-001
+    to: SyR-018
+  - type: verifies
+    from: TC-SyR-019-001
+    to: SyR-019
+  - type: verifies
+    from: TC-SyR-020-001
+    to: SyR-020
+  - type: verifies
+    from: TC-SyR-021-001
+    to: SyR-021
+  - type: verifies
+    from: TC-SyR-022-001
+    to: SyR-022
+  - type: verifies
+    from: TC-SyR-023-001
+    to: SyR-023
+  - type: verifies
+    from: TC-SyR-024-001
+    to: SyR-024
+  - type: verifies
+    from: TC-SyR-025-001
+    to: SyR-025
   - type: validates
     from: ATC-StR-001-001
     to: StR-001
@@ -93,39 +201,35 @@ links:
     from: CR-StR-001-002
     to: SwR-008
 waivers:
-  - requirement_id: StR-010
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-011
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-012
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-013
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-014
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-015
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-016
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-017
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-018
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-019
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-020
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-021
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-022
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-023
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-024
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-025
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-026
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
-  - requirement_id: StR-027
-    rationale: Calculator stakeholder requirements have been accepted on the calculator branch, but downstream SyR derivation has not started yet.
+  - requirement_id: SyR-010
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-011
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-012
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-013
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-014
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-015
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-016
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-017
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-018
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-019
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-020
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-021
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-022
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-023
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-024
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.
+  - requirement_id: SyR-025
+    rationale: Calculator system requirements have been derived and linked to verification specifications, but downstream SwR derivation has not started yet.

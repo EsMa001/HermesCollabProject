@@ -41,3 +41,239 @@
   status: accepted_by_agent
   assumptions: []
   open_questions: []
+- id: SyR-010
+  version: 1
+  parent_ids:
+    - StR-010
+    - StR-011
+  title: Execute supported arithmetic operations
+  statement: >
+    The system shall execute addition, subtraction, multiplication and division
+    on two user-provided operands and return the numerically correct result.
+  rationale: >
+    This system behavior realizes the core calculator purpose and operation set.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-011
+  version: 1
+  parent_ids:
+    - StR-012
+  title: Provide classical calculator GUI
+  statement: >
+    The system shall provide a graphical calculator user interface with digit
+    buttons, operator buttons and a visible display for input and results.
+  rationale: >
+    A usable calculator demonstrator requires a concrete interactive GUI.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-012
+  version: 1
+  parent_ids:
+    - StR-013
+    - StR-027
+  title: Restrict scope to simple operations
+  statement: >
+    The system shall support only simple calculator interactions in the first
+    scope and shall not evaluate complex expressions with operator precedence,
+    parentheses, scientific functions, memory functions, history, keyboard
+    shortcuts, copy/paste or undo/redo.
+  rationale: >
+    Constraining the first increment keeps the calculator demonstrator small and
+    testable.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-013
+  version: 1
+  parent_ids:
+    - StR-014
+  title: Operate as a local single-user application
+  statement: >
+    The system shall run as a local single-user desktop application without any
+    network dependency or multi-user capability.
+  rationale: >
+    The calculator example is intentionally scoped as a local demonstrator.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-014
+  version: 1
+  parent_ids:
+    - StR-015
+    - StR-002
+  title: Use Tkinter on the Python baseline
+  statement: >
+    The system shall implement its desktop graphical user interface using
+    Tkinter on top of the repository's Python implementation baseline.
+  rationale: >
+    Tkinter satisfies the local desktop UI requirement while staying aligned
+    with the Python baseline.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-015
+  version: 1
+  parent_ids:
+    - StR-016
+  title: Support integer and decimal operands
+  statement: >
+    The system shall accept and process both integer and decimal number inputs
+    within the calculator workflow.
+  rationale: >
+    Basic calculator usage requires support for common numeric input types.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-016
+  version: 1
+  parent_ids:
+    - StR-017
+  title: Reject division by zero with user feedback
+  statement: >
+    The system shall reject division by zero and present a clear user-visible
+    error indication instead of a numeric result.
+  rationale: >
+    Division by zero is a mandatory first-scope error case.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-017
+  version: 1
+  parent_ids:
+    - StR-018
+  title: Handle invalid requests predictably
+  statement: >
+    The system shall prevent invalid calculator requests where practical and
+    shall present understandable error feedback for any remaining invalid
+    requests.
+  rationale: >
+    Predictable error handling improves usability and robustness.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-018
+  version: 1
+  parent_ids:
+    - StR-019
+  title: Provide clear and equals controls
+  statement: >
+    The system shall provide at least a Clear control and an equals control in
+    the calculator user interface.
+  rationale: >
+    These controls are essential for a usable basic calculator interaction.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-019
+  version: 1
+  parent_ids:
+    - StR-020
+  title: Reuse computed result
+  statement: >
+    The system shall allow a computed result to become the starting value for a
+    subsequent calculator operation without manual re-entry.
+  rationale: >
+    Result reuse is part of expected calculator behavior.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-020
+  version: 1
+  parent_ids:
+    - StR-010
+    - StR-021
+  title: Preserve requirement-to-test traceability
+  statement: >
+    The system shall be represented by project artifacts that maintain explicit
+    traceability from stakeholder requirements to lower-level requirements,
+    implementation elements and tests.
+  rationale: >
+    The calculator example is also a workflow demonstrator for traceability.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-021
+  version: 1
+  parent_ids:
+    - StR-022
+  title: Separate calculation logic and GUI responsibilities
+  statement: >
+    The system shall structure the calculation logic and graphical user
+    interface as separate responsibilities so they can be evolved and verified
+    independently.
+  rationale: >
+    Separation of concerns improves maintainability and testability.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-022
+  version: 1
+  parent_ids:
+    - StR-023
+  title: Provide automated verification coverage
+  statement: >
+    The system shall include automated verification for the calculation logic
+    and for selected graphical user interface behaviors.
+  rationale: >
+    Automated verification is required for both product confidence and process
+    evidence.
+  verification_method: analysis
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-023
+  version: 1
+  parent_ids:
+    - StR-024
+  title: Format results for user readability
+  statement: >
+    The system shall display calculation results without unnecessary trailing
+    decimal places while preserving the correct numeric value.
+  rationale: >
+    Human-readable result formatting improves usability.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-024
+  version: 1
+  parent_ids:
+    - StR-025
+  title: Provide German-language user-facing text
+  statement: >
+    The system shall present the graphical user interface labels and relevant
+    error messages in German in the first scope.
+  rationale: >
+    German-language user-facing text fits the intended demonstration context.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
+- id: SyR-025
+  version: 1
+  parent_ids:
+    - StR-026
+  title: Start in a defined zero state
+  statement: >
+    The system shall initialize the calculator display to the value 0 when the
+    application starts.
+  rationale: >
+    A defined startup state improves predictability and testability.
+  verification_method: system_test
+  status: accepted_by_agent
+  assumptions: []
+  open_questions: []
