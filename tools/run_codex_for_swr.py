@@ -12,6 +12,7 @@ from _vmodel_common import REPO_ROOT, load_requirement_sets, trace_links, main_g
 
 ALLOWED_SWR_STATUS = {'accepted_by_agent', 'accepted_by_user'}
 ALLOWED_SYR_STATUS = {'accepted_by_agent', 'accepted_by_user'}
+ALLOWED_CR_STATUS = {'accepted', 'implemented'}
 
 
 def build_indexes() -> dict[str, dict[str, dict]]:
@@ -111,8 +112,8 @@ def preflight(swr_ids: list[str]) -> tuple[list[str], dict[str, dict]]:
             if cr is None:
                 errors.append(f'{swr_id} linked CR {cr_id} missing from change requests')
                 continue
-            if cr.get('status') != 'accepted':
-                errors.append(f'{swr_id} linked CR {cr_id} is not accepted (status={cr.get("status")})')
+            if cr.get('status') not in ALLOWED_CR_STATUS:
+                errors.append(f'{swr_id} linked CR {cr_id} has disallowed status {cr.get("status")}')
     return errors, indexes
 
 

@@ -42,3 +42,19 @@ def test_codex_execute_fails_cleanly_when_cli_missing() -> None:
     )
     assert result.returncode == 1
     assert 'ERROR: codex CLI not found in PATH' in result.stdout
+
+
+
+def test_codex_preflight_accepts_implemented_change_requests() -> None:
+    env = os.environ.copy()
+    env['HERMES_BRANCH_OVERRIDE'] = 'hermes/test-swr-gate'
+    result = subprocess.run(
+        [sys.executable, 'tools/run_codex_for_swr.py', '--swr', 'SwR-018', '--check-only'],
+        cwd=REPO_ROOT,
+        text=True,
+        capture_output=True,
+        check=False,
+        env=env,
+    )
+    assert result.returncode == 0, result.stdout + result.stderr
+    assert 'Preflight passed for: SwR-018' in result.stdout
